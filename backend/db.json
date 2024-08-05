@@ -11,7 +11,7 @@
       "id": 2,
       "descricao": "Estudar sobre acessibilidade",
       "categoria": "Trabalho",
-      "statusFinalizado": true,
+      "statusFinalizado": false,
       "prioridade": "Normal"
     },
     {
@@ -34,6 +34,20 @@
       "statusFinalizado": true,
       "categoria": "Estudos",
       "prioridade": "Alta"
+    },
+    {
+      "id": 10,
+      "descricao": "Enviar email",
+      "statusFinalizado": true,
+      "categoria": "Casa",
+      "prioridade": "Baixa"
+    },
+    {
+      "id": 11,
+      "descricao": "Fazer compra",
+      "statusFinalizado": false,
+      "categoria": "Casa",
+      "prioridade": "Normal"
     }
   ]
 }

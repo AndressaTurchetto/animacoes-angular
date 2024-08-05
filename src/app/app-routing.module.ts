@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouteReuseStrategy, RouterModule, Routes } from '@angular/router';
+
 import { AppRouteReuseStrategy } from './app-route-reuse-strategy'
 
 import { ListaTarefasComponent } from './lista-tarefas/lista-tarefas.component';
