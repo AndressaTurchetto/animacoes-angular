@@ -1,4 +1,4 @@
-import { animate, group, keyframes, query, state, style, transition, trigger } from '@angular/animations';
+import { animate, group, keyframes, query, stagger, state, style, transition, trigger } from '@angular/animations';
 
 export const highlightedStateTrigger = trigger('highlightedState', [
   state('default', style({
@@ -33,6 +33,7 @@ export const shownStateTrigger = trigger('shownState', [
   ])
 ])
 
+
 export const checkButtonTrigger = trigger('checkButton', [
   transition('* => checked', [
     animate('400ms ease-in', style({
@@ -45,13 +46,13 @@ export const filterTrigger = trigger('filterAnimation', [
   transition(':enter', [
     style({opacity: 0, width: 0}),
     animate('400ms ease-out', keyframes([
-      style({offset: 0, opacity: 0, width: 0}),
-      style({offset: 0.8, opacuty: 0.5, width: '*'}),
-      style({offset: 1, opacity: 1, width: '*'})
+      style({offset: 0, opacity:0, width:0}),
+      style({offset: 0.8, opacity:0.5, width:'*'}),
+      style({offset: 1, opacity:1, width:'*'})
     ]))
   ]),
   transition(':leave', [
-    animate('400ms cubic-bezier(.13,.9,.8,.1)', style({ opacity: 0, width: 0}))
+    animate('200ms cubic-bezier(.13,.9,.8,.1)', style({ opacity: 0, width: 0}))
   ])
 ])
 
@@ -102,7 +103,31 @@ export const shakeTrigger = trigger('shakeAnimation', [
         style({ transform: 'translateX(10px)'}),
         style({ transform: 'translateX(0)'}),
       ]))
-    ])
+    ], {optional: true})
   ])
 ])
 
+export const listStateTrigger = trigger('listState', [
+  transition('* => *', [
+    query(':enter', [
+      style({
+        opacity: 0,
+        transform: 'translateX(-100%)',
+      }),
+      stagger(200, [
+        animate('500ms ease-out', keyframes([
+          style({
+            opacity: 1,
+            transform: 'translateX(15%)',
+            offset: 0.4
+          }),
+          style({
+            opacity: 1,
+            transform: 'translateX(0)',
+            offset: 1
+          })
+        ]))
+      ])
+    ], {optional: true})
+  ])
+])
