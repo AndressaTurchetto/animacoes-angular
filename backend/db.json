@@ -29,25 +29,11 @@
       "prioridade": "Normal"
     },
     {
-      "id": 9,
-      "descricao": "Fazer curso de animações",
-      "statusFinalizado": true,
-      "categoria": "Estudos",
-      "prioridade": "Alta"
-    },
-    {
       "id": 10,
       "descricao": "Enviar email",
-      "statusFinalizado": true,
-      "categoria": "Casa",
-      "prioridade": "Baixa"
-    },
-    {
-      "id": 11,
-      "descricao": "Fazer compra",
       "statusFinalizado": false,
       "categoria": "Casa",
-      "prioridade": "Normal"
+      "prioridade": "Baixa"
     }
   ]
 }
